@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Commissioner:400,500,700&display=swap');
+
+body {
+    font-family: 'Commissioner', sans-serif !important;
+}
+
+.cs-transition {
+    transition: .5s !important;
+}
+
+.cs-w {
+    width: 750px !important;
+}
+
+.cs-mt {
+    margin-top: 15% !important;
+}
+
+.cs-position {
+    position: relative;
+}
+
+.cs-opacity {
+    opacity: .5 !important;
+}
+
+/*Background*/
+.cs-bg-image {
+    background: 
+        url('../images/image-hero-desktop.jpg') 
+        whitesmoke 
+        no-repeat 
+        top center / 100% !important;
+}
+
+.cs-bg-cyan {
+    background-color: hsl(176, 50%, 47%) !important;
+}
+
+.cs-bg-dark-cyan {
+    background-color: hsl(176, 72%, 28%) !important;
+}
+
+/*Border*/
+.cs-border {
+    border-left: solid 1px hsl(0, 0%, 48%) !important;
+    border-right: solid 1px hsl(0, 0%, 48%) !important;
+}
+
+/*Buttons*/
+.cs-link {
+    border-bottom: solid 2px transparent !important;
+    color: white !important;
+}
+
+.cs-link:hover{
+    border-color: white !important;
+}
+
+.cs-toggle {
+    border-color: transparent !important;
+}
+
+.cs-toggle:hover{
+    border-color: white !important;
+}
+
+.cs-btn:hover {
+    background-color: hsl(176, 72%, 28%) !important;
+}
+
+.cs-btn-toggle:hover {
+    background-color: hsl(176, 72%, 28%) !important;
+    color: white !important;
+}
+
+.cs-btn:disabled {
+    background-color: hsl(0, 0%, 48%) !important;
+}
+
+.cs-btn-toggle:disabled { 
+    background-color: lightgray !important;
+    color: hsl(0, 0%, 48%) !important;
+}
+
+.cs-btn-toggle:disabled .rounded-circle {
+    background-color: hsl(0, 0%, 48%) !important;
+    color: lightgray !important;
+}
+
+.cs-radio:hover {
+    color: hsl(176, 50%, 47%) !important;
+}
+
+.cs-input:hover {
+    border-color: hsl(176, 72%, 28%) !important;
+}
+
+/*Images*/
+.cs-logo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 50%;
+}
+
+/*Font*/
+.cs-fw-500 {
+    font-weight: 500 !important;
+}
+
+.cs-fw-700 {
+    font-weight: 700 !important;
+}
+
+.cs-tc-dark-gray {
+    color: hsl(0, 0%, 48%) !important;
+}
+
+.cs-tc-cyan {
+    color: hsl(176, 50%, 47%) !important;
+}
+
+.cs-tc-dark-cyan {
+    color: hsl(176, 72%, 28%) !important;
+}
+
+/*Progressbar*/
+.cs-pb .progress-bar {
+    border-radius: 50px !important;
+    background-color: hsl(176, 50%, 47%) !important;
+}
+
+@media (max-width: 991px) {
+    .cs-bg-image {
+        background: 
+            url('../images/image-hero-mobile.jpg') 
+            whitesmoke 
+            no-repeat 
+            top center / 100% !important;
+    }
+
+    .cs-bg-navbar{
+        background-color: white !important;
+    }
+
+    .cs-link {
+        color: black !important;
+    }
+
+    .cs-w {
+        width: 100% !important;
+    }
+
+    .cs-mt {
+        margin-top: 5% !important;
+    }
+
+    .cs-border {
+        border-left: none !important;
+        border-right: none !important;
+        border-top: solid 1px hsl(0, 0%, 48%) !important;
+        border-bottom: solid 1px hsl(0, 0%, 48%) !important;
+    }
+}
