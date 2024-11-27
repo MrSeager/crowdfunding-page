@@ -47,6 +47,14 @@ body {
     border-right: solid 1px hsl(0, 0%, 48%) !important;
 }
 
+.cs-bc-gray {
+    border: solid 2px darkgray !important;
+}
+
+.cs-bc-cyan {
+    border: solid 2px hsl(176, 50%, 47%) !important;
+}
+
 /*Buttons*/
 .cs-link {
     border-bottom: solid 2px transparent !important;
@@ -96,6 +104,36 @@ body {
     border-color: hsl(176, 72%, 28%) !important;
 }
 
+.cs-radio .form-check-input {
+    border-color: darkgray !important;
+    box-shadow: none !important;
+}
+
+.cs-radio .form-check-input {
+    position: relative;
+}
+
+.cs-radio .form-check-input:checked {
+    background-color: transparent !important;
+}
+
+.cs-radio .form-check-input:checked::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(176, 50%, 47%) !important;
+    width: 8px !important;
+    height: 8px !important;
+    left: 50% !important;
+    top: 50% !important;
+    border-radius: 50px !important;
+    transform: translate(-50%, -50%);
+}
+
+.btn-close {
+    box-shadow: none !important;
+    transition: .5s !important;
+}
+
 /*Images*/
 .cs-logo {
     position: absolute;
@@ -142,6 +180,7 @@ body {
 
     .cs-bg-navbar{
         background-color: white !important;
+        border: solid 1px lightgray !important
     }
 
     .cs-link {

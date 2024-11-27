@@ -6,7 +6,8 @@ import { Container, Modal, Form } from 'react-bootstrap';
 
 interface SectionOneMessegeProps {
     showMessage: boolean;
-    handleClose: () => void;
+    handleClosePanel: () => void;
+    handleShow: () => void;
     head: string;
     par: string;
     linePropsItems: {
@@ -31,12 +32,12 @@ interface SectionOneMessegeProps {
     }
 }
 
-const SectionOnePanel: FC<SectionOneMessegeProps> = ({ showMessage, handleClose, head, par, linePropsItems, linePropsPledge }) => {
+const SectionOnePanel: FC<SectionOneMessegeProps> = ({ showMessage, handleClosePanel, handleShow, head, par, linePropsItems, linePropsPledge }) => {
     const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
     
     return(
-        <Modal show={showMessage} onHide={handleClose} backdrop="static" keyboard={false} centered>
-            <Modal.Header closeButton className='border-0'>
+        <Modal show={showMessage} onHide={handleClosePanel} backdrop="static" keyboard={false} centered>
+            <Modal.Header closeButton className='border-0 cs-close-btn'>
                 <Modal.Title className='cs-fw-700'>{head}</Modal.Title>
             </Modal.Header>
             <Modal.Body className='d-flex flex-column'>
@@ -49,6 +50,8 @@ const SectionOnePanel: FC<SectionOneMessegeProps> = ({ showMessage, handleClose,
                         cost={null}
                         isChecked={selectedItemId === '0'} 
                         handleCheck={() => setSelectedItemId('0')}
+                        handleClosePanel={handleClosePanel}
+                        handleShow={handleShow}
                     />
                     <PledgeItem 
                         label={linePropsItems.item_head_1}
@@ -57,6 +60,8 @@ const SectionOnePanel: FC<SectionOneMessegeProps> = ({ showMessage, handleClose,
                         cost={linePropsItems.item_cost_1}
                         isChecked={selectedItemId === '1'} 
                         handleCheck={() => setSelectedItemId('1')}
+                        handleClosePanel={handleClosePanel}
+                        handleShow={handleShow}
                     />
                     <PledgeItem 
                         label={linePropsItems.item_head_2}
@@ -65,6 +70,8 @@ const SectionOnePanel: FC<SectionOneMessegeProps> = ({ showMessage, handleClose,
                         cost={linePropsItems.item_cost_2}
                         isChecked={selectedItemId === '2'} 
                         handleCheck={() => setSelectedItemId('2')}
+                        handleClosePanel={handleClosePanel}
+                        handleShow={handleShow}
                     />
                     <PledgeItem 
                         label={linePropsItems.item_head_3}
@@ -73,6 +80,8 @@ const SectionOnePanel: FC<SectionOneMessegeProps> = ({ showMessage, handleClose,
                         cost={linePropsItems.item_cost_3}
                         isChecked={selectedItemId === '3'} 
                         handleCheck={() => setSelectedItemId('3')}
+                        handleClosePanel={handleClosePanel}
+                        handleShow={handleShow}
                     />
                 </Form>
             </Modal.Body>

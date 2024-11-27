@@ -123,7 +123,9 @@ const CFPage: FC = () => {
             <animated.div style={barAnim}>
                 <CFNavbar />
             </animated.div>
-            <SectionOne 
+            <SectionOne
+                messege_head={lineProps.messege_head}
+                messege_par={lineProps.messege_par}
                 head={lineProps.head_1}
                 par={lineProps.par_1}
                 linePropsItems={linePropsItems}

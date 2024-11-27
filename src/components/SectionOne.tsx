@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 //Components
 import SectionOnePanel from './SectionOnePanel.tsx';
+import MessegePanel from './MessegePanel.tsx';
 //Bootstrap
 import { Container, Image, Button } from 'react-bootstrap';
 //Spring
@@ -12,6 +13,8 @@ import { IoIosBookmark } from "react-icons/io";
 import ImgLogo from '../images/logo-mastercraft.svg';
 
 interface SectionOneProps {
+    messege_head: string;
+    messege_par: string;
     head: string;
     par: string;
     linePropsItems: {
@@ -36,9 +39,13 @@ interface SectionOneProps {
     }
 }
 
-const SectionOne: FC<SectionOneProps> = ({ head, par, linePropsItems, linePropsPledge }) => {
+const SectionOne: FC<SectionOneProps> = ({ messege_head, messege_par, head, par, linePropsItems, linePropsPledge }) => {
     const [checked, setChecked] = useState(false);
+    const [showPanel, setShowPanel] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
+
+    const handleClosePanel = () => setShowPanel(false);
+    const handleShowPanel = () => setShowPanel(true);
 
     const handleClose = () => setShowMessage(false);
     const handleShow = () => setShowMessage(true);
@@ -59,7 +66,7 @@ const SectionOne: FC<SectionOneProps> = ({ head, par, linePropsItems, linePropsP
             <h1 className='cs-fw-700 h2'>{head}</h1>
             <p className='cs-tc-dark-gray'>{par}</p>
             <Container className='d-flex flex-row align-items-center justify-content-between'>
-                <Button className='cs-btn cs-transition px-4 py-2 rounded-pill cs-bg-cyan cs-fw-500 border-0' onClick={handleShow}>Back this project</Button>
+                <Button className='cs-btn cs-transition px-4 py-2 rounded-pill cs-bg-cyan cs-fw-500 border-0' onClick={handleShowPanel}>Back this project</Button>
                 <Button
                     onClick={() => setChecked(true)} 
                     disabled={checked} 
@@ -71,12 +78,19 @@ const SectionOne: FC<SectionOneProps> = ({ head, par, linePropsItems, linePropsP
                 </Button>
             </Container>
             <SectionOnePanel
-                showMessage={showMessage}
-                handleClose={handleClose}
+                showMessage={showPanel}
+                handleClosePanel={handleClosePanel}
+                handleShow={handleShow}
                 head={linePropsPledge.secOneItem_head}
                 par={linePropsPledge.secOneItem_par}
                 linePropsItems={linePropsItems}
                 linePropsPledge={linePropsPledge}
+            />
+            <MessegePanel 
+                showMessage={showMessage}
+                handleClose={handleClose}
+                messege_head={messege_head}
+                messege_par={messege_par}
             />
         </animated.div>
     );

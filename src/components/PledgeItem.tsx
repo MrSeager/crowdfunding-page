@@ -9,11 +9,18 @@ interface PledgeItemProps {
     cost: number | null;
     isChecked: boolean; 
     handleCheck: () => void;
+    handleClosePanel: () => void;
+    handleShow: () => void;
 }
 
-const PledgeItem: FC< PledgeItemProps> = ({ label, par, left, cost, isChecked, handleCheck }) => {
+const PledgeItem: FC< PledgeItemProps> = ({ label, par, left, cost, isChecked, handleCheck, handleClosePanel, handleShow }) => {
+    const handleContinue = () => {
+        handleClosePanel();
+        handleShow();
+    }
+    
     return(
-        <Container className={`border rounded rounded-3 p-3 ${left === 0 ? 'cs-opacity' : ''}`}>
+        <Container className={`cs-bc-${isChecked ? 'cyan' : 'gray'} cs-transition rounded rounded-3 p-3 ${left === 0 ? 'cs-opacity' : ''}`}>
             <Row>
                 <Col xs={11} className='d-flex flex-row align-items-center'>
                     <Form.Check
@@ -43,11 +50,15 @@ const PledgeItem: FC< PledgeItemProps> = ({ label, par, left, cost, isChecked, h
                         <Col xs={3}>
                             <InputGroup className='border border-2 rounded-pill cs-input cs-transition'>
                                 <InputGroup.Text className='border-0 bg-transparent cs-tc-dark-gray'>$</InputGroup.Text>
-                                <Form.Control className='shadow-none border-0 rounded-end-pill' />
+                                <Form.Control 
+                                    type='number' 
+                                    defaultValue={cost === null ? 1 : cost}
+                                    min={cost === null ? 1 : cost}
+                                    className='p-0 shadow-none border-0 rounded-end-pill' />
                             </InputGroup>
                         </Col>
                         <Col xs={4}>
-                            <Button type='button' className='w-100 cs-btn cs-transition px-4 py-2 rounded-pill cs-bg-cyan cs-fw-500 border-0'>Continue</Button>
+                            <Button type='button' onClick={handleContinue} className='w-100 cs-btn cs-transition px-4 py-2 rounded-pill cs-bg-cyan cs-fw-500 border-0'>Continue</Button>
                         </Col>
                     </Col>
                 }
