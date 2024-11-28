@@ -27,7 +27,7 @@ const SectionTwo: FC<SectionTwoProps> = ({ head_1, par_1, head_2, par_2, head_3,
     
     return(
         <animated.div ref={ref} style={springAnim} className='bg-white rounded rounded-3 cs-w border p-4'>
-            <Row>
+            <Row className='text-lg-start text-center'>
                 <Col lg={4} xs={12} className='px-4 py-lg-0 py-3'>
                     <h2 className='m-0 cs-fw-700 w-100'>{head_1}</h2>
                     <p className='m-0 cs-tc-dark-gray w-100'>{par_1}</p>

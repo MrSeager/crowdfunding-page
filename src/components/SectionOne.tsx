@@ -65,7 +65,7 @@ const SectionOne: FC<SectionOneProps> = ({ messege_head, messege_par, head, par,
             <Image fluid src={ImgLogo} alt='logo' className='cs-logo' />
             <h1 className='cs-fw-700 h2'>{head}</h1>
             <p className='cs-tc-dark-gray'>{par}</p>
-            <Container className='d-flex flex-row align-items-center justify-content-between'>
+            <Container className='d-flex flex-lg-row flex-column gap-lg-0 gap-3 align-items-center justify-content-between'>
                 <Button className='cs-btn cs-transition px-4 py-2 rounded-pill cs-bg-cyan cs-fw-500 border-0' onClick={handleShowPanel}>Back this project</Button>
                 <Button
                     onClick={() => setChecked(true)} 
