@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/crowdfunding-page/static/css/main.cf964d69.css",
-    "main.js": "/crowdfunding-page/static/js/main.3146e9a0.js",
+    "main.js": "/crowdfunding-page/static/js/main.da81c72a.js",
     "static/js/453.c2ae83fa.chunk.js": "/crowdfunding-page/static/js/453.c2ae83fa.chunk.js",
     "static/media/image-hero-desktop.jpg": "/crowdfunding-page/static/media/image-hero-desktop.631209c1fe8e34fb78c2.jpg",
     "static/media/image-hero-mobile.jpg": "/crowdfunding-page/static/media/image-hero-mobile.d4f477d4cd11ac3a012f.jpg",
@@ -10,11 +10,11 @@
     "static/media/logo-mastercraft.svg": "/crowdfunding-page/static/media/logo-mastercraft.dca2a8312b376716a2e0b7dfb8828b86.svg",
     "static/media/icon-check.svg": "/crowdfunding-page/static/media/icon-check.bdee5269fa45688504fcc6fb78ab8756.svg",
     "main.cf964d69.css.map": "/crowdfunding-page/static/css/main.cf964d69.css.map",
-    "main.3146e9a0.js.map": "/crowdfunding-page/static/js/main.3146e9a0.js.map",
+    "main.da81c72a.js.map": "/crowdfunding-page/static/js/main.da81c72a.js.map",
     "453.c2ae83fa.chunk.js.map": "/crowdfunding-page/static/js/453.c2ae83fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf964d69.css",
-    "static/js/main.3146e9a0.js"
+    "static/js/main.da81c72a.js"
   ]
 }
