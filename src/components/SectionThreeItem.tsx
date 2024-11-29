@@ -30,7 +30,7 @@ const SectionThreeItem: FC<SectionThreeItemProbs> = ({ item_head, item_cost, ite
                     <h4 className='cs-fw-700'>{item_head}</h4>
                 </Col>
                 <Col lg={6} xs={12} className='text-lg-end text-start'>
-                    <h5 className='cs-tc-cyan'>Pledge ${item_cost} or more</h5>
+                    <h5 className='cs-tc-cyan cs-fw-700'>Pledge ${item_cost} or more</h5>
                 </Col>
                 <Col xs={12} className='my-lg-3 my-0'>
                     <p className='cs-tc-dark-gray'>{item_par}</p>

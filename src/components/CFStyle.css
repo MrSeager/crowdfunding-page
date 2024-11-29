@@ -41,6 +41,10 @@ body {
     background-color: hsl(176, 72%, 28%) !important;
 }
 
+.cs-bg-gradient {
+    background: linear-gradient(180deg, rgb(48, 48, 48) 0%, rgba(255,77,151,0) 100%) !important;
+}
+
 /*Border*/
 .cs-border {
     border-left: solid 1px hsl(0, 0%, 48%) !important;

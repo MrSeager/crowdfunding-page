@@ -13,7 +13,7 @@ import ImgLogo from '../images/logo.svg';
 
 const CFNavbar: FC = () => {
     return(
-        <Navbar expand='lg' fixed='top' className='mx-lg-5 my-lg-4 m-3'>
+        <Navbar expand='lg' fixed='top' className='px-lg-5 py-lg-4 p-3 cs-bg-gradient'>
             <Navbar.Brand href='#home'>
                 <Image src={ImgLogo} alt='log' />
             </Navbar.Brand>
